@@ -2,6 +2,7 @@ import { make } from './ui';
 import bgIcon from './svg/background.svg';
 import borderIcon from './svg/border.svg';
 import stretchedIcon from './svg/stretched.svg';
+import rotateIcon from './svg/rotate.svg';
 
 /**
  * Working with Block Tunes
@@ -36,6 +37,11 @@ export default class Tunes {
         name: 'withBackground',
         icon: bgIcon,
         title: 'With background'
+      },
+      {
+        name: 'rotate',
+        icon: rotateIcon,
+        title: 'Rotate 90 degrees'
       }
     ];
   }
@@ -90,6 +96,10 @@ export default class Tunes {
    */
   tuneClicked(tuneName) {
     let button = this.buttons.find(el => el.dataset.tune === tuneName);
+
+    if (tuneName === 'rotate') {
+      return;
+    }
 
     button.classList.toggle(this.CSS.buttonActive, !button.classList.contains(this.CSS.buttonActive));
 

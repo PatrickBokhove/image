@@ -222,6 +222,34 @@ export default class Ui {
    * @param {boolean} status - true for enable, false for disable
    */
   applyTune(tuneName, status) {
+    if (tuneName === 'rotate') {
+      let rotateClass;
+
+      this.nodes.wrapper.classList.forEach((className) => {
+        if (className.includes('rotate')) {
+          rotateClass = className;
+        }
+      });
+
+      console.log(rotateClass, 'rotateClass');
+
+      if (rotateClass) {
+        const currentDegrees = parseInt(rotateClass.split('rotate-')[1], 10);
+
+        console.log(currentDegrees, 'currentDegrees');
+
+        const newDegrees = currentDegrees + 90;
+
+        console.log(newDegrees, 'newDegrees');
+
+        this.nodes.wrapper.classList.add(`${this.CSS.wrapper}--${tuneName}-${newDegrees}`);
+      } else {
+        this.nodes.wrapper.classList.add(`${this.CSS.wrapper}--${tuneName}-90`);
+      }
+
+      return;
+    }
+
     this.nodes.wrapper.classList.toggle(`${this.CSS.wrapper}--${tuneName}`, status);
   }
 }
