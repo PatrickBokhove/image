@@ -343,11 +343,7 @@ export default class ImageTool {
    */
   tuneToggled(tuneName) {
     // inverse tune state
-    if (tuneName !== 'rotate') {
-      this.setTune(tuneName, !this._data[tuneName]);
-    } else {
-      this.setTune(tuneName, true);
-    }
+    this.setTune(tuneName, !this._data[tuneName]);
   }
 
   /**
