@@ -231,17 +231,11 @@ export default class Ui {
         }
       });
 
-      console.log(rotateClass, 'rotateClass');
-
       if (rotateClass) {
         const currentDegrees = parseInt(rotateClass.split('rotate-')[1], 10);
+        const newDegrees = (currentDegrees + 90) % 360;
 
-        console.log(currentDegrees, 'currentDegrees');
-
-        const newDegrees = currentDegrees + 90;
-
-        console.log(newDegrees, 'newDegrees');
-
+        this.nodes.wrapper.classList.remove(`${this.CSS.wrapper}--${tuneName}-${currentDegrees}`);
         this.nodes.wrapper.classList.add(`${this.CSS.wrapper}--${tuneName}-${newDegrees}`);
       } else {
         this.nodes.wrapper.classList.add(`${this.CSS.wrapper}--${tuneName}-90`);

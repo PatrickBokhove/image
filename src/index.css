@@ -135,6 +135,30 @@
       }
     }
   }
+
+  &--rotate-90 {
+    ^&__image {
+      &-picture {
+        transform: rotate(90deg);
+      }
+    }
+  }
+
+  &--rotate-180 {
+    ^&__image {
+      &-picture {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &--rotate-270 {
+    ^&__image {
+      &-picture {
+        transform: rotate(270deg);
+      }
+    }
+  }
 }
 
 @keyframes image-preloader-spin {
