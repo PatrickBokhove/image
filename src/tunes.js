@@ -108,9 +108,9 @@ export default class Tunes {
     const button = this.buttons.find(el => el.dataset.tune === tuneName);
 
     if (tuneName.includes('rotate')) {
-      button.classList.forEach((className) => {
-        if (className.includes('rotate')) {
-          button.classList.toggle(this.CSS.buttonActive, false);
+      button.siblings().forEach((b) => {
+        if (b.dataset.tune.includes('rotate' && b.dataset.tune !== tuneName)) {
+          b.classList.toggle(this.CSS.buttonActive, false);
         }
       });
     }
