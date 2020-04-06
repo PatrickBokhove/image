@@ -95,6 +95,10 @@ export default class Tunes {
    * @param {string} tuneName - clicked tune name
    */
   tuneClicked(tuneName) {
+    if (tuneName === 'rotate') {
+      return false;
+    }
+
     const button = this.buttons.find(el => el.dataset.tune === tuneName);
 
     if (tuneName !== 'rotate') {
