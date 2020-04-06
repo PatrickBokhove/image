@@ -139,6 +139,11 @@
 
   &--rotate-90 {
     ^&__image {
+      height: 628px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
       &-picture {
         transform: rotate(90deg);
       }
@@ -147,6 +152,11 @@
 
   &--rotate-180 {
     ^&__image {
+      height: 628px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
       &-picture {
         transform: rotate(180deg);
       }
@@ -155,6 +165,11 @@
 
   &--rotate-270 {
     ^&__image {
+      height: 628px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
       &-picture {
         transform: rotate(-90deg);
       }
