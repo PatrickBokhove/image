@@ -343,6 +343,15 @@ export default class ImageTool {
    */
   tuneToggled(tuneName) {
     // inverse tune state
+    const rotateTunes = ['rotate-90', 'rotate-180', 'rotate-270'];
+
+    if (tuneName.includes('rotate')) {
+      rotateTunes.splice(rotateTunes.indexOf(tuneName), 1);
+
+      rotateTunes.foreach((rotateTune) => {
+        this.setTune(rotateTune, false);
+      });
+    }
     this.setTune(tuneName, !this._data[tuneName]);
   }
 
