@@ -2,12 +2,12 @@
   --bg-color: #cdd1e0;
   --front-color: #388ae5;
   --border-color: #e8e8eb;
+  transition: 0.5s ease transform;
 
   &__image {
     border-radius: 3px;
     overflow: hidden;
     margin-bottom: 10px;
-    transition: 0.5s ease transform;
 
     &-picture {
       max-width: 100%;
