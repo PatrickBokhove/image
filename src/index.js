@@ -345,6 +345,8 @@ export default class ImageTool {
     // inverse tune state
     if (tuneName !== 'rotate') {
       this.setTune(tuneName, !this._data[tuneName]);
+    } else {
+      this.setTune(tuneName, true);
     }
   }
 
