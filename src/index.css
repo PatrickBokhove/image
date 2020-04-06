@@ -152,11 +152,6 @@
 
   &--rotate-180 {
     ^&__image {
-      height: 628px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
       &-picture {
         transform: rotate(180deg);
       }
