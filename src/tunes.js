@@ -2,7 +2,9 @@ import { make } from './ui';
 import bgIcon from './svg/background.svg';
 import borderIcon from './svg/border.svg';
 import stretchedIcon from './svg/stretched.svg';
-import rotateIcon from './svg/rotate.svg';
+import rotate90 from './svg/rotate90.svg';
+import rotate180 from './svg/rotate180.svg';
+import rotate270 from './svg/rotate270.svg';
 
 /**
  * Working with Block Tunes
@@ -40,17 +42,17 @@ export default class Tunes {
       },
       {
         name: 'rotate-90',
-        icon: rotateIcon,
+        icon: rotate90,
         title: 'Rotate 90 degrees'
       },
       {
         name: 'rotate-180',
-        icon: rotateIcon,
+        icon: rotate180,
         title: 'Rotate 180 degrees'
       },
       {
         name: 'rotate-270',
-        icon: rotateIcon,
+        icon: rotate270,
         title: 'Rotate 270 degrees'
       }
     ];
