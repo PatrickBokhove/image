@@ -7,6 +7,7 @@
     border-radius: 3px;
     overflow: hidden;
     margin-bottom: 10px;
+    transition: 0.5s ease transform;
 
     &-picture {
       max-width: 100%;
