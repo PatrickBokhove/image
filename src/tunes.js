@@ -39,17 +39,17 @@ export default class Tunes {
         title: 'With background'
       },
       {
-        name: 'rotate90',
+        name: 'rotate-90',
         icon: rotateIcon,
         title: 'Rotate 90 degrees'
       },
       {
-        name: 'rotate180',
+        name: 'rotate-180',
         icon: rotateIcon,
         title: 'Rotate 180 degrees'
       },
       {
-        name: 'rotate270',
+        name: 'rotate-270',
         icon: rotateIcon,
         title: 'Rotate 270 degrees'
       }
@@ -108,7 +108,7 @@ export default class Tunes {
     const button = this.buttons.find(el => el.dataset.tune === tuneName);
 
     button.classList.toggle(this.CSS.buttonActive, !button.classList.contains(this.CSS.buttonActive));
-    
+
     this.onChange(tuneName);
   }
 }
