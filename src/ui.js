@@ -229,9 +229,6 @@ export default class Ui {
           this.nodes.wrapper.classList.remove(className);
         }
       });
-      // this.nodes.wrapper.classList.add(`${this.CSS.wrapper}--${tuneName}`, status);
-
-      // return;
     }
 
     this.nodes.wrapper.classList.toggle(`${this.CSS.wrapper}--${tuneName}`, status);
