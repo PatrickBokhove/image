@@ -2,7 +2,6 @@
   --bg-color: #cdd1e0;
   --front-color: #388ae5;
   --border-color: #e8e8eb;
-  transition: 0.5s ease transform;
 
   &__image {
     border-radius: 3px;
@@ -13,6 +12,7 @@
       max-width: 100%;
       vertical-align: bottom;
       display: block;
+      transition: 0.5s ease transform;
     }
 
     &-preloader {
