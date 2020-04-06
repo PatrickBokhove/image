@@ -348,7 +348,7 @@ export default class ImageTool {
     if (tuneName.includes('rotate')) {
       rotateTunes.splice(rotateTunes.indexOf(tuneName), 1);
 
-      rotateTunes.foreach((rotateTune) => {
+      rotateTunes.forEach((rotateTune) => {
         this.setTune(rotateTune, false);
       });
     }
