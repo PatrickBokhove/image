@@ -223,7 +223,7 @@ export default class Ui {
    */
   applyTune(tuneName, status) {
     console.log(tuneName, status);
-    if (tuneName === 'rotate') {
+    if (tuneName === 'rotate' && status) {
       let rotateClass;
 
       this.nodes.wrapper.classList.forEach((className) => {

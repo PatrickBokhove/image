@@ -80,10 +80,7 @@ export default class Tunes {
       });
 
       el.dataset.tune = tune.name;
-
-      if (tune.name !== 'rotate') {
-        el.classList.toggle(this.CSS.buttonActive, toolData[tune.name]);
-      }
+      el.classList.toggle(this.CSS.buttonActive, toolData[tune.name]);
 
       this.buttons.push(el);
 
