@@ -156,7 +156,7 @@
   &--rotate-270 {
     ^&__image {
       &-picture {
-        transform: rotate(270deg);
+        transform: rotate(-90deg);
       }
     }
   }
