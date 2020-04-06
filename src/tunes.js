@@ -107,13 +107,13 @@ export default class Tunes {
   tuneClicked(tuneName) {
     const button = this.buttons.find(el => el.dataset.tune === tuneName);
 
-    // if (tuneName.includes('rotate')) {
-    //   button.parentNode.childNodes.forEach((b) => {
-    //     if (b.dataset.tune.includes('rotate') && b.dataset.tune !== tuneName) {
-    //       b.classList.toggle(this.CSS.buttonActive, false);
-    //     }
-    //   });
-    // }
+    if (tuneName.includes('rotate')) {
+      button.parentNode.childNodes.forEach((b) => {
+        if (b.dataset.tune.includes('rotate') && b.dataset.tune !== tuneName) {
+          b.classList.toggle(this.CSS.buttonActive, false);
+        }
+      });
+    }
 
     button.classList.toggle(this.CSS.buttonActive, !button.classList.contains(this.CSS.buttonActive));
 
