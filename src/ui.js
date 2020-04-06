@@ -222,14 +222,14 @@ export default class Ui {
    * @param {boolean} status - true for enable, false for disable
    */
   applyTune(tuneName, status) {
-    console.log(tuneName, status);
+    /* console.log(tuneName, status);
     if (tuneName.includes('rotate')) {
       this.nodes.wrapper.classList.forEach((className) => {
         if (className.includes('rotate')) {
           this.nodes.wrapper.classList.remove(className);
         }
       });
-    }
+    } */
 
     this.nodes.wrapper.classList.toggle(`${this.CSS.wrapper}--${tuneName}`, status);
   }
