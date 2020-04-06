@@ -223,7 +223,7 @@ export default class Ui {
    */
   applyTune(tuneName, status) {
     console.log(tuneName, status);
-    if (tuneName === 'rotate' && status) {
+    if (tuneName === 'rotate') {
       let rotateClass;
 
       this.nodes.wrapper.classList.forEach((className) => {
@@ -237,9 +237,9 @@ export default class Ui {
         const newDegrees = (currentDegrees + 90) % 360;
 
         this.nodes.wrapper.classList.remove(`${this.CSS.wrapper}--${tuneName}-${currentDegrees}`);
-        this.nodes.wrapper.classList.add(`${this.CSS.wrapper}--${tuneName}-${newDegrees}`);
+        this.nodes.wrapper.classList.add(`${this.CSS.wrapper}--${tuneName}-${newDegrees}`, true);
       } else {
-        this.nodes.wrapper.classList.add(`${this.CSS.wrapper}--${tuneName}-90`);
+        this.nodes.wrapper.classList.add(`${this.CSS.wrapper}--${tuneName}-90`, true);
       }
 
       return;
