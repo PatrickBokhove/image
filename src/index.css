@@ -139,7 +139,7 @@
 
   &--rotate-90 {
     ^&__image {
-      height: 100%;
+      height: 628px;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -160,7 +160,7 @@
 
   &--rotate-270 {
     ^&__image {
-      height: 100%;
+      height: 628px;
       display: flex;
       justify-content: center;
       align-items: center;
