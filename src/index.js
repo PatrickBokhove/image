@@ -383,7 +383,7 @@ export default class ImageTool {
         const blockId = this.api.blocks.getCurrentBlockIndex();
         const block = this.api.blocks.getBlockByIndex(blockId);
 
-        const imageElement = this.nodes.wrapper.querySelector('img');
+        const imageElement = block.querySelector('img');
 
         imageElement.addEventListener('load', (e) => {
           console.log(e);
