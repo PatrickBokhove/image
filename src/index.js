@@ -363,8 +363,6 @@ export default class ImageTool {
   setTune(tuneName, value) {
     this._data[tuneName] = value;
 
-    console.log(value);
-
     this.ui.applyTune(tuneName, value);
 
     if (tuneName === 'stretched') {
@@ -395,7 +393,7 @@ export default class ImageTool {
 
           if (value) {
             imageWrapper.style.height = height;
-            imageWrapper.style.transform = `scale(1)`;
+            imageWrapper.style.transform = 'scale(1)';
           } else {
             imageWrapper.style.height = `${width * ratio}px`;
             imageWrapper.style.transform = `scale(${ratio})`;

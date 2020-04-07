@@ -222,6 +222,7 @@ export default class Ui {
    * @param {boolean} status - true for enable, false for disable
    */
   applyTune(tuneName, status) {
+    console.log(tuneName, status);
     this.nodes.wrapper.classList.toggle(`${this.CSS.wrapper}--${tuneName}`, status);
   }
 }
