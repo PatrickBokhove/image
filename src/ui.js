@@ -232,11 +232,11 @@ export default class Ui {
         const ratio = width / height;
 
         if (status) {
-          imageWrapper.style.height = height;
-          imageWrapper.style.transform = 'scale(1)';
-        } else {
           imageWrapper.style.height = `${width * ratio}px`;
           imageWrapper.style.transform = `scale(${ratio})`;
+        } else {
+          imageWrapper.style.height = height;
+          imageWrapper.style.transform = 'scale(1)';
         }
       }
     }
