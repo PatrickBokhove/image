@@ -385,9 +385,14 @@ export default class ImageTool {
 
         const imageElement = block.querySelector('img');
 
-        imageElement.addEventListener('load', (e) => {
-          console.log(e);
-        });
+        if (imageElement) {
+          const width = imageElement.width;
+          const height = imageElement.height;
+          const ratio = width / height;
+
+          console.log(width, height, ratio);
+        }
+
       }).catch(err => {
         console.error(err);
       });
