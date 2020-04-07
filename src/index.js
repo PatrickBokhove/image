@@ -391,6 +391,8 @@ export default class ImageTool {
           const height = imageElement.height;
           const ratio = width / height;
 
+          console.log(imageTool);
+
           imageTool.style.height = height * ratio;
           // imageTool.style.transform = `scale(${ratio})`;
         }
