@@ -392,7 +392,7 @@ export default class ImageTool {
           const ratio = width / height;
 
           imageWrapper.style.height = `${width * ratio}px`;
-          console.log(imageElement.style.transform);
+          console.log(imageElement.style);
           // imageElement.style.transform += `scale(${ratio})`;
         }
       }).catch(err => {
