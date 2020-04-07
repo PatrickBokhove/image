@@ -365,8 +365,7 @@ export default class ImageTool {
 
     this.ui.applyTune(tuneName, value);
 
-    if (tuneName === 'stretched' || tuneName.includes('rotate')) {
-      console.log('try stretch');
+    if (tuneName === 'stretched') {
       /**
        * Wait until the API is ready
        */
@@ -374,6 +373,20 @@ export default class ImageTool {
         const blockId = this.api.blocks.getCurrentBlockIndex();
 
         this.api.blocks.stretchBlock(blockId, value);
+      }).catch(err => {
+        console.error(err);
+      });
+    }
+
+    if (tuneName === 'rotate90' || tuneName === 'rotate270') {
+      /**
+       * Wait until the API is ready
+       */
+      Promise.resolve().then(() => {
+        const blockId = this.api.blocks.getCurrentBlockIndex();
+        const block = this.api.blocks.getBlockByIndex(blockId);
+
+        console.log(block);
       }).catch(err => {
         console.error(err);
       });
