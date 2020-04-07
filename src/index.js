@@ -379,11 +379,7 @@ export default class ImageTool {
     }
 
     if (tuneName === 'rotate-90' || tuneName === 'rotate-270') {
-      console.log('rotate');
-      /**
-       * Wait until the API is ready
-       */
-      Promise.resolve().then(() => {
+      /* Promise.resolve().then(() => {
         const blockId = this.api.blocks.getCurrentBlockIndex();
 
         console.log(blockId);
@@ -393,7 +389,7 @@ export default class ImageTool {
         console.log(block);
       }).catch(err => {
         console.error(err);
-      });
+      }); */
     }
   }
 
