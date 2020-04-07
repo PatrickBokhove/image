@@ -363,6 +363,8 @@ export default class ImageTool {
   setTune(tuneName, value) {
     this._data[tuneName] = value;
 
+    console.log(value);
+
     this.ui.applyTune(tuneName, value);
 
     if (tuneName === 'stretched') {
