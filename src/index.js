@@ -377,32 +377,6 @@ export default class ImageTool {
         console.error(err);
       });
     }
-
-    if (tuneName === 'rotate-90' || tuneName === 'rotate-270') {
-      Promise.resolve().then(() => {
-        const blockId = this.api.blocks.getCurrentBlockIndex();
-        const block = this.api.blocks.getBlockByIndex(blockId);
-
-        const imageWrapper = block.querySelector('.image-tool__image');
-        const imageElement = block.querySelector('img');
-
-        if (imageElement) {
-          const width = imageElement.width;
-          const height = imageElement.height;
-          const ratio = width / height;
-
-          if (value) {
-            imageWrapper.style.height = height;
-            imageWrapper.style.transform = 'scale(1)';
-          } else {
-            imageWrapper.style.height = `${width * ratio}px`;
-            imageWrapper.style.transform = `scale(${ratio})`;
-          }
-        }
-      }).catch(err => {
-        console.error(err);
-      });
-    }
   }
 
   /**
