@@ -386,15 +386,14 @@ export default class ImageTool {
         const imageWrapper = block.querySelector('.image-tool__image');
         const imageElement = block.querySelector('img');
 
-        imageElement.addEventListener('load', () => {
+        if (imageElement) {
           const width = imageElement.width;
           const height = imageElement.height;
           const ratio = width / height;
 
           imageWrapper.style.height = `${width * ratio}px`;
-          console.log(imageElement.style);
-          // imageElement.style.transform += `scale(${ratio})`;
-        });
+          imageWrapper.style.transform += `scale(${ratio})`;
+        }
       }).catch(err => {
         console.error(err);
       });
