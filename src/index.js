@@ -380,7 +380,7 @@ export default class ImageTool {
       });
     }
 
-    if (tuneName === 'rotate-90' || tuneName === 'rotate-270') {
+    if ((tuneName === 'rotate-90' || tuneName === 'rotate-270') && value === true) {
       Promise.resolve().then(() => {
         const blockId = this.api.blocks.getCurrentBlockIndex();
         const block = this.api.blocks.getBlockByIndex(blockId);
@@ -393,8 +393,13 @@ export default class ImageTool {
           const height = imageElement.height;
           const ratio = width / height;
 
-          imageWrapper.style.height = `${width * ratio}px`;
-          imageWrapper.style.transform = `scale(${ratio})`;
+          if (value) {
+            imageWrapper.style.height = height;
+            imageWrapper.style.transform = `scale(1)`;
+          } else {
+            imageWrapper.style.height = `${width * ratio}px`;
+            imageWrapper.style.transform = `scale(${ratio})`;
+          }
         }
       }).catch(err => {
         console.error(err);
