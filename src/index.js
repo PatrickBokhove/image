@@ -378,7 +378,7 @@ export default class ImageTool {
       });
     }
 
-    if ((tuneName === 'rotate-90' || tuneName === 'rotate-270') && value === true) {
+    if (tuneName === 'rotate-90' || tuneName === 'rotate-270') {
       Promise.resolve().then(() => {
         const blockId = this.api.blocks.getCurrentBlockIndex();
         const block = this.api.blocks.getBlockByIndex(blockId);
