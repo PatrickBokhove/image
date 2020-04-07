@@ -379,17 +379,18 @@ export default class ImageTool {
     }
 
     if (tuneName === 'rotate-90' || tuneName === 'rotate-270') {
-      /* Promise.resolve().then(() => {
+      Promise.resolve().then(() => {
         const blockId = this.api.blocks.getCurrentBlockIndex();
-
-        console.log(blockId);
-
         const block = this.api.blocks.getBlockByIndex(blockId);
 
-        console.log(block);
+        const imageElement = this.nodes.wrapper.querySelector('img');
+
+        imageElement.addEventListener('load', (e) => {
+          console.log(e);
+        });
       }).catch(err => {
         console.error(err);
-      }); */
+      });
     }
   }
 

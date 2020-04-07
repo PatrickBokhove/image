@@ -222,10 +222,6 @@ export default class Ui {
    * @param {boolean} status - true for enable, false for disable
    */
   applyTune(tuneName, status) {
-    const imageElement = this.nodes.wrapper.querySelector('img');
-
-    console.log(imageElement);
-
     this.nodes.wrapper.classList.toggle(`${this.CSS.wrapper}--${tuneName}`, status);
   }
 }
