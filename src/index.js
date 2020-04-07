@@ -365,7 +365,8 @@ export default class ImageTool {
 
     this.ui.applyTune(tuneName, value);
 
-    if (tuneName === 'stretched') {
+    if (tuneName === 'stretched' || tuneName.includes('rotate')) {
+      console.log('try stretch');
       /**
        * Wait until the API is ready
        */
