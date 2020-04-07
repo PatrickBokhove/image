@@ -378,7 +378,7 @@ export default class ImageTool {
       });
     }
 
-    if (tuneName === 'rotate90' || tuneName === 'rotate270') {
+    if (tuneName === 'rotate-90' || tuneName === 'rotate-270') {
       console.log('rotate');
       /**
        * Wait until the API is ready
