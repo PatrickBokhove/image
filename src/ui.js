@@ -222,25 +222,6 @@ export default class Ui {
    * @param {boolean} status - true for enable, false for disable
    */
   applyTune(tuneName, status) {
-    if (tuneName === 'rotate-90' || tuneName === 'rotate-270') {
-      const imageWrapper = this.nodes.wrapper.querySelector('.image-tool__image');
-      const imageElement = this.nodes.wrapper.querySelector('img');
-
-      if (imageElement) {
-        const width = imageElement.width;
-        const height = imageElement.height;
-        const ratio = width / height;
-
-        if (status) {
-          imageWrapper.style.height = `${width * ratio}px`;
-          imageWrapper.style.transform = `scale(${ratio})`;
-        } else {
-          imageWrapper.style.height = height;
-          imageWrapper.style.transform = 'scale(1)';
-        }
-      }
-    }
-
     this.nodes.wrapper.classList.toggle(`${this.CSS.wrapper}--${tuneName}`, status);
   }
 }
