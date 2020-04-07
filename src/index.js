@@ -383,6 +383,7 @@ export default class ImageTool {
         const blockId = this.api.blocks.getCurrentBlockIndex();
         const block = this.api.blocks.getBlockByIndex(blockId);
 
+        const imageTool = block.querySelector('image-tool');
         const imageElement = block.querySelector('img');
 
         if (imageElement) {
@@ -390,8 +391,8 @@ export default class ImageTool {
           const height = imageElement.height;
           const ratio = width / height;
 
-          block.style.height *= ratio;
-          imageElement.style.transform = `scale(${ratio})`;
+          imageTool.style.height = height * ratio;
+          imageTool.style.transform = `scale(${ratio})`;
         }
       }).catch(err => {
         console.error(err);
